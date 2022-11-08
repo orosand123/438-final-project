@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eiP-aL-8ly"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="eiP-aL-8ly"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="iVn-jt-uV5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="aGV-Qd-Mt8"/>
+                    <tabBarItem key="tabBarItem" title="Webstac" id="aGV-Qd-Mt8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hy-XG-uhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="GDw-jA-zIg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="YOP-u1-DI0"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="YOP-u1-DI0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T8-tp-EQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="eBS-ay-rRs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9L9-zc-cLN"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="9L9-zc-cLN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hd-TA-356" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +139,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zZT-7R-8Mc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfV-uz-6Xg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
