@@ -15,11 +15,11 @@ import MapKit
 //    let time: time_value
 //}
 //
-//class Building{
-//    let name: String
-//    let coords: CLLocation
-//}
-//
+struct Building{
+    let name: String
+    let coords: CLLocation
+}
+
 //enum Day{
 //    case Monday
 //    case Tuesday
