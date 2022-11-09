@@ -40,9 +40,9 @@
         <!--Map-->
         <scene sceneID="LW6-TP-E6o">
             <objects>
-                <viewController id="nap-k4-rYu" userLabel="Map" sceneMemberID="viewController">
+                <viewController id="nap-k4-rYu" userLabel="Map" customClass="MapViewController" customModule="_38_final_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wE2-p4-MI4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-nf-Bg3">
@@ -54,10 +54,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="YOP-u1-DI0"/>
+                    <navigationItem key="navigationItem" id="JAn-M4-ut0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T8-tp-EQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="754.6875"/>
+            <point key="canvasLocation" x="948" y="1440"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="rPp-AA-Ce5">
@@ -99,6 +100,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" id="9L9-zc-cLN"/>
+                    <connections>
+                        <segue destination="nap-k4-rYu" kind="show" identifier="mapSegue" id="S1z-Du-NXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hd-TA-356" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,8 +214,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TG4-MU-MwJ"/>
-                        <segue destination="kRN-M1-Fca" kind="relationship" relationship="viewControllers" id="vqU-VB-JnU"/>
-                        <segue destination="nap-k4-rYu" kind="relationship" relationship="viewControllers" id="1IJ-OP-8Z1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekN-BN-dWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
