@@ -11,7 +11,17 @@ import MapKit
 
 class MapViewController: ViewController {
 
+    //outlets and actions
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
+    //instance vars
+    var theBuilding : Buildings?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.addAnnotation(theBuilding!)
+        
     }
 }

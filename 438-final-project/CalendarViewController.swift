@@ -7,8 +7,14 @@
 
 import Foundation
 import UIKit
-class CalendarViewController: ViewController, UITableViewDataSource {
+class CalendarViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    //functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mapVC = segue.destination as? MapViewController
+        mapVC?.theBuilding = calendarSchedule[currentInt].building
+    }
     
     //tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,15 +27,21 @@ class CalendarViewController: ViewController, UITableViewDataSource {
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentInt = indexPath.row
+        performSegue(withIdentifier: "mapSegue", sender: self)
+    }
     
 
     //instance vars
     var calendarSchedule: [WUClass] = []
+    var currentInt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     

@@ -12,11 +12,9 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //vars
     var classes: [WUClass] = []
-    
     //functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let calendarVC = segue.destination as? CalendarViewController
-        print ("sending data")
         calendarVC?.calendarSchedule = classes
     }
     
@@ -60,7 +58,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     //buildings
-    let buildings = [Buildings(title: "Whitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, 90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, 90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, 90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, 90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
+    let buildings = [Buildings(title: "Whitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, -90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, -90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, -90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, -90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
 
     
     //ViewController
