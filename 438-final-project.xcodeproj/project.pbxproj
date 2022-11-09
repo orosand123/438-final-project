@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		134DCC63291B240300DF927F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9BC2C79329118DB3008A678F /* 438-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "438-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC2C79629118DB3008A678F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC2C79829118DB3008A678F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 				9BC2C79F29118DB5008A678F /* Assets.xcassets */,
 				9BC2C7A129118DB5008A678F /* LaunchScreen.storyboard */,
 				9BC2C7A429118DB5008A678F /* Info.plist */,
+				134DCC63291B240300DF927F /* README.md */,
 			);
 			path = "438-final-project";
 			sourceTree = "<group>";
