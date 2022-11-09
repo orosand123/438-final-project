@@ -176,6 +176,12 @@
                                 <rect key="frame" x="0.0" y="274" width="390" height="79"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-K4-uSx">
+                                <rect key="frame" x="129" y="696" width="133" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Class"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="loQ-K6-C1V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
