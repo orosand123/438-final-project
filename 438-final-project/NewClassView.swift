@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 
 class NewClassView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var NewClass: WUClass?
+    var className = ""
+    var classDays: [Day] = []
+    var classTime = time_value
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
@@ -22,6 +28,8 @@ class NewClassView: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var buildingResults: UITableView!
     @IBOutlet weak var timePicker: UIDatePicker!
     
+    @IBAction func addClassButton(_ sender: Any) {
+    }
     
 }
 
