@@ -12,10 +12,13 @@ import MapKit
 class WUClass{
     let building: Buildings
     let name: String
-    
-    init(building: Buildings, name: String){
+    let day: Day
+    let time: time_value
+    init(building: Buildings, name: String, day: Day, time: time_value){
         self.building = building
         self.name = name
+        self.day = day
+        self.time = time
     }
 }
 
@@ -38,10 +41,10 @@ class Buildings: NSObject, MKAnnotation {
     
 }
 
-//enum Day{
-//    case Monday
-//    case Tuesday
-//    case Wednesday
-//    case Thursday
-//    case Friday
-//}
+enum Day{
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+}
