@@ -23,5 +23,8 @@ class MapViewController: ViewController {
         
         mapView.addAnnotation(theBuilding!)
         
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.64859, longitude: -90.30775), latitudinalMeters: 1500, longitudinalMeters: 1500)
+        mapView.setRegion(region, animated: true)
+        
     }
 }
