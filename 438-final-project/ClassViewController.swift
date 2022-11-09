@@ -12,14 +12,14 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //tableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classes.count
+        return buildings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //BuildingNames
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel!.text = classes[indexPath.row].locationName
+        cell.textLabel!.text = buildings[indexPath.row].locationName
         
         //Style
         if indexPath.row % 2 == 0 {
@@ -40,7 +40,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     //Classes
-    let classes = [Buildings(title: "Whitaker", locationName: "Whitaker", coordinate: CLLocationCoordinate2DMake(38.64915, 90.30338)),Buildings(title: "Jubel", locationName: "Jubel", coordinate: CLLocationCoordinate2DMake(38.64854, 90.30345)),Buildings(title: "McKelvey", locationName: "McKelvey", coordinate: CLLocationCoordinate2DMake(38.64810, 90.30171)),Buildings(title: "Green", locationName: "Green", coordinate: CLLocationCoordinate2DMake(38.64894, 90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
+    let buildings = [Buildings(title: "Whitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, 90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, 90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, 90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, 90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
 
     
     //ViewController
