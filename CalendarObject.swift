@@ -7,14 +7,18 @@
 
 import Foundation
 import MapKit
-//
-//class WUClass{
-//    let building: Building
-//    let name: String
-//    let day: Day
-//    let time: time_value
-//}
-//
+
+
+class WUClass{
+    let building: Buildings
+    let name: String
+    
+    init(building: Buildings, name: String){
+        self.building = building
+        self.name = name
+    }
+}
+
 
 
 class Buildings: NSObject, MKAnnotation {

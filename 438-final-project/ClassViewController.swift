@@ -10,6 +10,16 @@ import CoreLocation
 
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //vars
+    var classes: [WUClass] = []
+    
+    //functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let calendarVC = segue.destination as? CalendarViewController
+        print ("sending data")
+        calendarVC?.calendarSchedule = classes
+    }
+    
     //tableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return buildings.count
@@ -34,12 +44,22 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print ("pushBuildingToClasses")
+        
+        if nameOfClass.text?.count == 0 {
+            classes.append(WUClass(building: buildings[indexPath.row], name: "Default1"))
+        }
+        else{
+            classes.append(WUClass(building: buildings[indexPath.row], name: "\(nameOfClass.text!)"))
+        }
+        
+       
+        //segue
+        performSegue(withIdentifier: "unwindToCalendar", sender: self)
+        
     }
     
     
-    
-    //Classes
+    //buildings
     let buildings = [Buildings(title: "Whitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, 90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, 90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, 90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, 90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
 
     
@@ -49,7 +69,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+        print("inside classes")
         // Do any additional setup after loading the view.
     }
     
@@ -57,8 +77,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     //Outlets and Actions
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func nameOfClass(_ sender: Any) {
-    }
+    @IBOutlet weak var nameOfClass: UITextField!
     
-
 }
