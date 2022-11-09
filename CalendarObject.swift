@@ -12,9 +12,18 @@ class WUClass{
     let building: Building
     let name: String
     let day: Day
+    let time: time_value
 }
 
 class Building{
     let name: String
-    let coords: mapkit.Coordinate
+    let coords: CLLocation
+}
+
+enum Day{
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
 }
