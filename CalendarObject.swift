@@ -34,11 +34,6 @@ class Buildings: NSObject, MKAnnotation {
     
 }
 
-struct Building{
-    let name: String
-    let coords: CLLocation
-}
-
 //enum Day{
 //    case Monday
 //    case Tuesday
