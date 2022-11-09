@@ -6,5 +6,15 @@
 //
 
 import Foundation
+import MapKit
 
-struct Calendar
+class WUClass{
+    let building: Building
+    let name: String
+    let day: Day
+}
+
+class Building{
+    let name: String
+    let coords: mapkit.Coordinate
+}
