@@ -171,7 +171,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iV-P6-AoY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iV-P6-AoY">
                                 <rect key="frame" x="172" y="208" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="DR5-zZ-Zl7">
@@ -202,6 +202,7 @@
                     <connections>
                         <outlet property="buildingResults" destination="4TQ-Kz-ifV" id="Em3-Lb-n5W"/>
                         <outlet property="buildingSearchBar" destination="p7e-UE-kEp" id="a3d-mu-zZI"/>
+                        <outlet property="dayDropDown" destination="8iV-P6-AoY" id="bwI-u7-Vzy"/>
                         <outlet property="nameTextField" destination="aPL-cK-yvQ" id="VSv-KK-TOC"/>
                         <outlet property="timePicker" destination="nOx-pL-sP8" id="dhX-G0-L5I"/>
                         <segue destination="6yG-S1-sjF" kind="unwind" identifier="unwindToCalendar" unwindAction="unwind:" id="DH5-aW-Sxa"/>

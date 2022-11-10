@@ -26,15 +26,42 @@ class NewClassView: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var buildingSearchBar: UITextField!
+    @IBOutlet weak var dayDropDown: UIButton!
     @IBOutlet weak var buildingResults: UITableView!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBAction func addClassButton(_ sender: Any) {
     }
+    private lazy var dayMenu = UIMenu(title: "Day Selection", children: [
+        UIAction(title: "Monday", attributes: [], state: .off) {
+            action in
+            print("Monday")
+        },
+        UIAction(title: "Tuesday", attributes: [], state: .off) {
+            action in
+            print("Tuesday")
+        },
+        UIAction(title: "Wednesday", attributes: [], state: .off) {
+            action in
+            print("Monday")
+        },
+        UIAction(title: "Wednesday", attributes: [], state: .off) {
+            action in
+            print("Monday")
+        },
+        UIAction(title: "Wednesday", attributes: [], state: .off) {
+            action in
+            print("Monday")
+        }
+    ])
     override func viewDidLoad() {
         super.viewDidLoad()
         var classTime = Date()
         let dateFormatter = DateFormatter()
         timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+        dayDropDown.showsMenuAsPrimaryAction = true
+        dayDropDown.menu = dayMenu
+        dayDropDown.setTitle("Days", for: .normal)
+        
     }
     @objc func timePickerValueChanged(sender: UIDatePicker){
         let dateFormatter = DateFormatter()
