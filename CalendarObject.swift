@@ -12,13 +12,13 @@ import MapKit
 class WUClass{
     let building: Buildings
     let name: String
-    let day: Day
-    let time: time_value
-    init(building: Buildings, name: String, day: Day, time: time_value){
+//    let day: Day
+//    let time: time_value
+    init(building: Buildings, name: String){
         self.building = building
         self.name = name
-        self.day = day
-        self.time = time
+//        self.day = day
+//        self.time = time
     }
 }
 

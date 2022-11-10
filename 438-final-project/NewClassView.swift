@@ -13,22 +13,31 @@ class NewClassView: UIViewController, UITableViewDataSource, UITableViewDelegate
     var NewClass: WUClass?
     var className = ""
     var classDays: [Day] = []
-    var classTime = time_value
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return nil
+        let cell = tableView.dequeueReusableCell(withIdentifier: "buildingCell", for: indexPath) as UITableViewCell
+        return cell
     }
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var buildingSearchBar: UITextField!
     @IBOutlet weak var buildingResults: UITableView!
     @IBOutlet weak var timePicker: UIDatePicker!
-    
     @IBAction func addClassButton(_ sender: Any) {
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var classTime = Date()
+        let dateFormatter = DateFormatter()
+        timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+    }
+    @objc func timePickerValueChanged(sender: UIDatePicker){
+        print(sender.date)
     }
     
 }
