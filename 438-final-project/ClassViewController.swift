@@ -14,8 +14,8 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     var classes: [WUClass] = []
     //functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let calendarVC = segue.destination as? CalendarViewController
-        calendarVC?.calendarSchedule = classes
+//        let calendarVC = segue.destination as? CalendarViewController
+//        calendarVC?.calendarSchedule = classes
     }
     
     //tableView Functions
@@ -42,18 +42,18 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if nameOfClass.text?.count == 0 {
-            classes.append(WUClass(building: buildings[indexPath.row], name: "Default1"))
-        }
-        else{
-            classes.append(WUClass(building: buildings[indexPath.row], name: "\(nameOfClass.text!)"))
-        }
-        
-       
-        //segue
-        performSegue(withIdentifier: "unwindToCalendar", sender: self)
-        
+//        if let cell = tableView.cellForRow(at: indexPath){
+//        if cell.text?.count == 0 {
+//            classes.append(WUClass(building: buildings[indexPath.row], name: "Default1"))
+//        }
+//        else{
+//            classes.append(WUClass(building: buildings[indexPath.row], name: "\(nameOfClass.text!)"))
+//        }
+//
+//
+//        //segue
+//        performSegue(withIdentifier: "unwindToCalendar", sender: self)
+//        }
     }
     
     
@@ -75,6 +75,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     //Outlets and Actions
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var nameOfClass: UITextField!
+//    @IBOutlet weak var nameOfClass: UITextField!
     
 }

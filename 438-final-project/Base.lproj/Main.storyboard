@@ -182,7 +182,7 @@
                                 </menu>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-pL-sP8">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-pL-sP8">
                                 <rect key="frame" x="0.0" y="274" width="390" height="79"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
@@ -202,9 +202,7 @@
                     <connections>
                         <outlet property="buildingResults" destination="4TQ-Kz-ifV" id="Em3-Lb-n5W"/>
                         <outlet property="buildingSearchBar" destination="p7e-UE-kEp" id="a3d-mu-zZI"/>
-                        <outlet property="nameOfClass" destination="aPL-cK-yvQ" id="bll-4D-SoE"/>
                         <outlet property="nameTextField" destination="aPL-cK-yvQ" id="VSv-KK-TOC"/>
-                        <outlet property="tableView" destination="4TQ-Kz-ifV" id="gwg-xZ-hsd"/>
                         <outlet property="timePicker" destination="nOx-pL-sP8" id="dhX-G0-L5I"/>
                         <segue destination="6yG-S1-sjF" kind="unwind" identifier="unwindToCalendar" unwindAction="unwind:" id="DH5-aW-Sxa"/>
                     </connections>

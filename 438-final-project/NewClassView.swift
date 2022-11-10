@@ -37,7 +37,9 @@ class NewClassView: UIViewController, UITableViewDataSource, UITableViewDelegate
         timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
     }
     @objc func timePickerValueChanged(sender: UIDatePicker){
-        print(sender.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss"
+        print(dateFormatter.string(from: sender.date))
     }
     
 }
