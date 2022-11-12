@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class MapViewController: ViewController {
+class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDelegate{
 
     //outlets and actions
     @IBOutlet weak var mapView: MKMapView!
@@ -17,14 +17,63 @@ class MapViewController: ViewController {
     
     //instance vars
     var theBuilding : Buildings?
+    let currentLocation = CLLocationManager()
+    var lat = 0.0
+    var long = 0.0
+    var routeTime = 0.0;
+    var routeDistance = 0.0;
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.currentLocation.requestAlwaysAuthorization()
+        self.currentLocation.requestWhenInUseAuthorization()
+        currentLocation.delegate = self
+        currentLocation.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        currentLocation.startUpdatingLocation()
+        mapView.showsUserLocation = true
+        mapView.delegate = self
         mapView.addAnnotation(theBuilding!)
-        
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.64859, longitude: -90.30775), latitudinalMeters: 1500, longitudinalMeters: 1500)
         mapView.setRegion(region, animated: true)
         
     }
+    func getDirections()
+        {
+            //https://stackoverflow.com/questions/29319643/how-to-draw-a-route-between-two-locations-using-mapkit-in-swift
+            let findDirections = MKDirections.Request()
+            let currentLocation = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long))
+            findDirections.source = MKMapItem(placemark: currentLocation)
+            let buildingCoordinates = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: theBuilding!.latitude, longitude: theBuilding!.longitude))
+            findDirections.destination = MKMapItem(placemark: buildingCoordinates)
+            findDirections.transportType = .walking //requests only the walking directions
+            let directions = MKDirections(request: findDirections)
+            directions.calculate { response, error in
+            guard let response = response else {
+                print("Error: \(error?.localizedDescription ?? "No error specified").") //will return "no route available" if there is route (usually happens if any coordinates are 0.0
+                            return
+                }
+                let walkingRoute = response.routes[0]
+                self.routeTime = walkingRoute.expectedTravelTime
+                self.routeDistance = walkingRoute.distance
+                print(self.routeTime)
+                self.mapView.addOverlay(walkingRoute.polyline, level: .aboveRoads)
+            }
+        }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let currentLoc: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        lat = currentLoc.latitude
+        long = currentLoc.longitude
+        getDirections() //fetches and displays the directions
+    }
+    
+    //this render function is the one causing all the complier error: invalid library file problems but not sure how to fix and it doesnt cause any real functional problems
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        //https://medium.com/fabcoding/swift-display-route-between-2-locations-using-mapkit-7de8ee0acd38
+         let routeRender = MKPolylineRenderer(overlay: overlay)
+         routeRender.strokeColor = UIColor.blue
+         routeRender.lineWidth = 5.0 //makes the route viewable
+         return routeRender
+    }
+
 }
