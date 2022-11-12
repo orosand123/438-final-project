@@ -22,7 +22,9 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
     var long = 0.0
     var routeTime = 0.0;
     var routeDistance = 0.0;
-
+    @IBOutlet weak var estimatedTime: UILabel!
+    
+    @IBOutlet weak var distanceToBuilding: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +56,9 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
                             return
                 }
                 let walkingRoute = response.routes[0]
-                self.routeTime = walkingRoute.expectedTravelTime
-                self.routeDistance = walkingRoute.distance
-                print(self.routeTime)
+                //https://stackoverflow.com/questions/27338573/rounding-a-double-value-to-x-number-of-decimal-places-in-swift
+                self.estimatedTime.text = "Estimated Travel Time: \(Int(round(walkingRoute.expectedTravelTime/60.0))) minutes"
+                self.distanceToBuilding.text = "Distance: \(Int(round(walkingRoute.distance*3.28084))) feet"
                 self.mapView.addOverlay(walkingRoute.polyline, level: .aboveRoads)
             }
         }
