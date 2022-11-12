@@ -20,19 +20,27 @@ class WUClass{
 
 
 
-class Buildings: NSObject, MKAnnotation {
+class Buildings: NSObject, MKAnnotation, Codable {
     let title : String?
     let locationName: String
-    let coordinate: CLLocationCoordinate2D
-    
+    let latitude: Double
+    let longitude: Double
+    var coordinate:  CLLocationCoordinate2D{
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
     init(title: String, locationName: String, coordinate: CLLocationCoordinate2D){
         self.title = title
         self.locationName = locationName
-        self.coordinate = coordinate
+        self.latitude = coordinate.latitude
+        self.longitude = coordinate.longitude
     }
     
     var subtitle: String?{
         return locationName
     }
     
+}
+
+struct BuildingList: Codable{
+    var buildings: [Buildings]
 }
