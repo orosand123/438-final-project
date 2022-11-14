@@ -43,9 +43,23 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        calendarSchedule = loadClassData()
+        tableView.reloadData()
     }
     
     
+    //functions
+    func loadClassData() -> [WUClass]{
+        var classSchedule: [WUClass] = []
+        if let data = UserDefaults.standard.object(forKey: "schedule") as? Data{
+            if let classSchedule2 = try? JSONDecoder().decode([WUClass].self, from: data){
+                classSchedule = classSchedule2
+            }
+        }
+        return classSchedule
+    }
+    
+    //outlets and actions
     @IBAction func unwind(_ seg: UIStoryboardSegue){
         print("cashMoney")
         tableView.reloadData()
@@ -53,8 +67,6 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
         
         
     }
-
-    //outlets and actions
     @IBOutlet weak var tableView: UITableView!
     
 

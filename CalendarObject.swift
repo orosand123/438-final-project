@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 
-class WUClass{
+class WUClass: Codable{
     let building: Buildings
     let name: String
     init(building: Buildings, name: String){

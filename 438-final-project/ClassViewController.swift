@@ -48,10 +48,14 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if nameOfClass.text?.count == 0 {
-                    classes.append(WUClass(building: buildings[indexPath.row], name: "Default1"))
+            classes = loadClassData()
+            classes.append(WUClass(building: buildings[indexPath.row], name: "Default"))
+            try! saveClassData(classes)
         }
         else{
+            classes = loadClassData()
             classes.append(WUClass(building: buildings[indexPath.row], name: "\(nameOfClass.text!)"))
+            try! saveClassData(classes)
         }
                 
                
@@ -66,11 +70,8 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     let buildingTempList = [Buildings(title: "Wwwwwwhitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, -90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, -90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, -90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, -90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
 
     
-    //ViewController
+    //functions
     func saveData(_ buildings:[Buildings]) throws{
-//        if let encoded = try? JSONEncoder().encode(buildings) {
-//            UserDefaults.standard.set(encoded, forKey: "buildings")
-//        }
         let manager = FileManager.default
         guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
         let fileUrl = url.appendingPathComponent("building list.plist")
@@ -88,6 +89,24 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         let arr = try! decoder.decode([Buildings].self, from: data)
         return(arr)
     }
+    
+    func saveClassData(_ classSchedule:[WUClass]) throws{
+        if let encoded = try? JSONEncoder().encode(classSchedule){
+            UserDefaults.standard.set(encoded, forKey: "schedule")
+        }
+    }
+    
+    func loadClassData() -> [WUClass]{
+        var classSchedule: [WUClass] = []
+        if let data = UserDefaults.standard.object(forKey: "schedule") as? Data{
+            if let classSchedule2 = try? JSONDecoder().decode([WUClass].self, from: data){
+                classSchedule = classSchedule2
+            }
+        }
+        return classSchedule
+    }
+    
+    
     //ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,8 +119,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-    //Outlets and Actions
-//    func filterBuildings(
     @IBAction func buildingSearchChanged(_ sender: Any) {
         self.buildings = self.fullBuildingList.filter {
             $0.title?.lowercased().contains(buildingSearchBar.text?.lowercased() ?? "") ?? false
