@@ -66,12 +66,33 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     
     //ViewController
+    func saveData(_ buildings:[Buildings]) throws{
+        if let encoded = try? JSONEncoder().encode(buildings) {
+            UserDefaults.standard.set(encoded, forKey: "buildings")
+        }
+        print("success")
+     }
+    func loadData() -> [Buildings]{
+        let defaults = UserDefaults.standard
+        var buildings: [Buildings] = []
+        if let Data = defaults.object(forKey: "buildings") as? Data {
+            let Decoder = JSONDecoder()
+            if let buildings2 = try? Decoder.decode([Buildings].self, from: Data) {
+                buildings = buildings2
+            }
+    }
+        return buildings
+    }
+    //ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         print("inside classes")
+        try! saveData(buildings)
+        let buildings1 = loadData()
+        print(buildings1[1].title)
         // Do any additional setup after loading the view.
     }
     
