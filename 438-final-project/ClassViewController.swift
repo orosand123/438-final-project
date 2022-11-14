@@ -13,7 +13,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     //vars
     var classes: [WUClass] = []
     var buildings: [Buildings] = []
-    
+    var fullBuildingList: [Buildings] = []
     
     
     //functions
@@ -95,13 +95,22 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         print("inside classes")
-        buildings = loadData()
+        fullBuildingList = loadData()
+        buildings = fullBuildingList
     }
     
     
     //Outlets and Actions
+//    func filterBuildings(
+    @IBAction func buildingSearchChanged(_ sender: Any) {
+        self.buildings = self.fullBuildingList.filter {
+            $0.title?.lowercased().contains(buildingSearchBar.text?.lowercased() ?? "") ?? false
+                        }
+        print(buildings.count)
+        tableView.reloadData()
+    }
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var buildingSearchBar: UITextField!
     @IBOutlet weak var nameOfClass: UITextField!
     
 }
