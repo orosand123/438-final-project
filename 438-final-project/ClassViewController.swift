@@ -12,6 +12,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //vars
     var classes: [WUClass] = []
+    var buildings: [Buildings] = []
     
     
     
@@ -62,26 +63,30 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     //buildings
-    let buildings = [Buildings(title: "Whitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, -90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, -90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, -90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, -90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
+    let buildingTempList = [Buildings(title: "Wwwwwwhitaker Hall", locationName: "Whitaker Hall", coordinate: CLLocationCoordinate2DMake(38.64915, -90.30338)),Buildings(title: "Jubel Hall", locationName: "Jubel Hall", coordinate: CLLocationCoordinate2DMake(38.64854, -90.30345)),Buildings(title: "McKelvey Hall", locationName: "McKelvey Hall", coordinate: CLLocationCoordinate2DMake(38.64810, -90.30171)),Buildings(title: "Green Hall", locationName: "Green Hall", coordinate: CLLocationCoordinate2DMake(38.64894, -90.30160)) ].sorted(by: {$0.locationName < $1.locationName})
 
     
     //ViewController
     func saveData(_ buildings:[Buildings]) throws{
-        if let encoded = try? JSONEncoder().encode(buildings) {
-            UserDefaults.standard.set(encoded, forKey: "buildings")
-        }
-        print("success")
+//        if let encoded = try? JSONEncoder().encode(buildings) {
+//            UserDefaults.standard.set(encoded, forKey: "buildings")
+//        }
+        let manager = FileManager.default
+        guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
+        let fileUrl = url.appendingPathComponent("building list.plist")
+        try! manager.createFile(atPath: fileUrl.path, contents: nil, attributes: nil)
+        let encoder = PropertyListEncoder()
+        let encodedData = try! encoder.encode(buildings)
+        try! encodedData.write(to: fileUrl)
+        print(fileUrl)
      }
     func loadData() -> [Buildings]{
-        let defaults = UserDefaults.standard
-        var buildings: [Buildings] = []
-        if let Data = defaults.object(forKey: "buildings") as? Data {
-            let Decoder = JSONDecoder()
-            if let buildings2 = try? Decoder.decode([Buildings].self, from: Data) {
-                buildings = buildings2
-            }
-    }
-        return buildings
+        let path = Bundle.main.path(forResource: "building list", ofType: "plist")!
+        let url = URL(fileURLWithPath: path)
+        let data = try! Data(contentsOf: url)
+        let decoder = PropertyListDecoder()
+        let arr = try! decoder.decode([Buildings].self, from: data)
+        return(arr)
     }
     //ViewController
     override func viewDidLoad() {
@@ -90,10 +95,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         print("inside classes")
-        try! saveData(buildings)
-        let buildings1 = loadData()
-        print(buildings1[1].title)
-        // Do any additional setup after loading the view.
+        buildings = loadData()
     }
     
     

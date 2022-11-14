@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Green Hall</string>
+		<key>locationName</key>
+		<string>Green Hall</string>
+		<key>latitude</key>
+		<real>38.64894</real>
+		<key>longitude</key>
+		<real>-90.30159999999999</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Jubel Hall</string>
+		<key>locationName</key>
+		<string>Jubel Hall</string>
+		<key>latitude</key>
+		<real>38.64854</real>
+		<key>longitude</key>
+		<real>-90.30345</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>McKelvey Hall</string>
+		<key>locationName</key>
+		<string>McKelvey Hall</string>
+		<key>latitude</key>
+		<real>38.6481</real>
+		<key>longitude</key>
+		<real>-90.30171</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Whitaker Hall</string>
+		<key>locationName</key>
+		<string>Whitaker Hall</string>
+		<key>latitude</key>
+		<real>38.64915</real>
+		<key>longitude</key>
+		<real>-90.30338</real>
+	</dict>
+</array>
+</plist>
