@@ -35,10 +35,10 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Style
         if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor.systemGray5
+            cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.2)
         }
         else{
-            cell.backgroundColor = UIColor.systemGray6
+            cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.1)
         }
         
         
@@ -75,7 +75,8 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         let encodedData = try! encoder.encode(buildings)
         try! encodedData.write(to: fileUrl)
         print(fileUrl)
-     }
+    }
+    
     func loadData() -> [Buildings]{
         let path = Bundle.main.path(forResource: "building list", ofType: "plist")!
         let url = URL(fileURLWithPath: path)

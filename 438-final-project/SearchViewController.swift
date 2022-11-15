@@ -26,10 +26,10 @@ class SearchViewController: ViewController, UITableViewDataSource, UITableViewDe
         
         //Style
         if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor.systemGray5
+            cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.1)
         }
         else{
-            cell.backgroundColor = UIColor.systemGray6
+            cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.2)
         }
         
         

@@ -73,7 +73,7 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         //https://medium.com/fabcoding/swift-display-route-between-2-locations-using-mapkit-7de8ee0acd38
          let routeRender = MKPolylineRenderer(overlay: overlay)
-         routeRender.strokeColor = UIColor.blue
+         routeRender.strokeColor = UIColor(red: 0/255, green: 115/255, blue: 96/255, alpha: 0.7)
          routeRender.lineWidth = 5.0 //makes the route viewable
          return routeRender
     }
