@@ -126,6 +126,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPi-l5-KvY">
+                                <rect key="frame" x="16" y="50" width="78" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="kRN-M1-Fca" eventType="touchUpInside" id="dzD-Hu-hxg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBS-ay-rRs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hd-TA-356" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="814"/>
+            <point key="canvasLocation" x="947.69230769230762" y="813.98104265402844"/>
         </scene>
         <!--AddClass-->
         <scene sceneID="PMK-AT-tvb">
@@ -245,8 +254,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="32" height="32"/>
-        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

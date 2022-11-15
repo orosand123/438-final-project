@@ -42,5 +42,75 @@
 		<key>longitude</key>
 		<real>-90.30338</real>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Brauer Hall</string>
+		<key>locationName</key>
+		<string>Brauer Hall</string>
+		<key>latitude</key>
+		<real>38.64892</real>
+		<key>longitude</key>
+		<real>-90.3023</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Tisch Park</string>
+		<key>locationName</key>
+		<string>Tisch Park</string>
+		<key>latitude</key>
+		<real>38.64787</real>
+		<key>longitude</key>
+		<real>-90.3038</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Schnuck Pavilion</string>
+		<key>locationName</key>
+		<string>Schnuck Pavilion</string>
+		<key>latitude</key>
+		<real>38.64837</real>
+		<key>longitude</key>
+		<real>-90.30382</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Sumers Welcome Center</string>
+		<key>locationName</key>
+		<string>Sumers Welcome Center</string>
+		<key>latitude</key>
+		<real>38.64734</real>
+		<key>longitude</key>
+		<real>-90.30394</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Weil Hall</string>
+		<key>locationName</key>
+		<string>Weil Hall</string>
+		<key>latitude</key>
+		<real>38.64716</real>
+		<key>longitude</key>
+		<real>-90.30347</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Kemper Art Museum</string>
+		<key>locationName</key>
+		<string>Kemper Art Museum</string>
+		<key>latitude</key>
+		<real>38.64715</real>
+		<key>longitude</key>
+		<real>-90.30273</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Wilson Hall</string>
+		<key>locationName</key>
+		<string>Wilson Hall</string>
+		<key>latitude</key>
+		<real>38.64756</real>
+		<key>longitude</key>
+		<real>-90.30706000000001</real>
+	</dict>
 </array>
 </plist>

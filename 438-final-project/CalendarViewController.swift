@@ -69,5 +69,15 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
     }
     @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBAction func clearButton(_ sender: Any) {
+        calendarSchedule.removeAll()
+        UserDefaults.standard.removeObject(forKey: "schedule")
+        if let encoded = try? JSONEncoder().encode(calendarSchedule){
+            UserDefaults.standard.set(encoded, forKey: "schedule")
+        }
+        tableView.reloadData()
+    }
+    
 
 }
