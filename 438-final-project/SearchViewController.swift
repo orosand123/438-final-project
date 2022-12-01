@@ -11,7 +11,7 @@ import UIKit
 
 class SearchViewController: ViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
     let searchController = UISearchController()
-
+    var currentInt = 0
     var buildings: [Buildings] = []
     var fullBuildingList: [Buildings] = []
 
@@ -37,9 +37,13 @@ class SearchViewController: ViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        }
-        
+        currentInt = indexPath.row
+        performSegue(withIdentifier: "buildingSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mapVC = segue.destination as? MapViewController
+        mapVC?.theBuilding = buildings[currentInt]
+    }
     func loadData() -> [Buildings]{
         let path = Bundle.main.path(forResource: "building list", ofType: "plist")!
         let url = URL(fileURLWithPath: path)
