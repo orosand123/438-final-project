@@ -12,6 +12,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //vars
     var classes: [WUClass] = []
+    var selectedBuilding: Buildings?
     var buildings: [Buildings] = []
     var fullBuildingList: [Buildings] = []
     
@@ -32,7 +33,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         //BuildingNames
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel!.text = buildings[indexPath.row].locationName
-        
         //Style
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.2)
@@ -40,31 +40,42 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         else{
             cell.backgroundColor = UIColor(red: 165/255, green: 20/255, blue: 23/255, alpha: 0.1)
         }
-        
+        if selectedBuilding == buildings[indexPath.row]{
+            cell.backgroundColor = UIColor.systemGreen
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedBuilding =  buildings[indexPath.row]
+        }
+    
+    @IBAction func classAddButton(_ sender: Any) {
         
         if nameOfClass.text?.count == 0 {
-            classes = loadClassData()
-            classes.append(WUClass(building: buildings[indexPath.row], name: "Default"))
-            try! saveClassData(classes)
+            let errorAlert = UIAlertController(title: "Error", message: "Please enter a class name", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            }
+            errorAlert.addAction(OKAction)
+            present(errorAlert, animated: true)
         }
         else{
-            classes = loadClassData()
-            classes.append(WUClass(building: buildings[indexPath.row], name: "\(nameOfClass.text!)"))
-            try! saveClassData(classes)
+            if let building = selectedBuilding{
+                classes = loadClassData()
+                classes.append(WUClass(building: building, name: "\(nameOfClass.text!)"))
+                try! saveClassData(classes)
+                performSegue(withIdentifier: "unwindToCalendar", sender: self)
+            } else{
+                let errorAlert = UIAlertController(title: "Error", message: "Please select a building", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                }
+                errorAlert.addAction(OKAction)
+                present(errorAlert, animated: true)
+            }
+            
         }
-                
-               
-        //segue
-        performSegue(withIdentifier: "unwindToCalendar", sender: self)
-                
-        
     }
-    
     //functions
     func saveData(_ buildings:[Buildings]) throws{
         let manager = FileManager.default
