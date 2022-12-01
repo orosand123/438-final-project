@@ -11,11 +11,12 @@ import CoreLocation
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //vars
+    @IBOutlet weak var timePicker: UIDatePicker!
     var classes: [WUClass] = []
     var selectedBuilding: Buildings?
     var buildings: [Buildings] = []
     var fullBuildingList: [Buildings] = []
-    
+    var days: [Bool] = [false,false,false,false,false]
     
     //functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,7 +53,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedBuilding =  buildings[indexPath.row]
         }
-    
+  
     @IBAction func classAddButton(_ sender: Any) {
         
         if nameOfClass.text?.count == 0 {
@@ -65,7 +66,8 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         else{
             if let building = selectedBuilding{
                 classes = loadClassData()
-                classes.append(WUClass(building: building, name: "\(nameOfClass.text!)"))
+                classes.append(WUClass(building: building, name: "\(nameOfClass.text!)", days: days, time: timePicker.date))
+                print(timePicker.date)
                 try! saveClassData(classes)
                 performSegue(withIdentifier: "unwindToCalendar", sender: self)
             } else{
@@ -139,4 +141,34 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var buildingSearchBar: UITextField!
     @IBOutlet weak var nameOfClass: UITextField!
     
+    @IBAction func monButton(_ sender: Any) {
+        if let button = sender as? UIButton {
+            days[0] = !days[0]
+            button.isSelected = days[0]
+            }
+    }
+    @IBAction func tuesButton(_ sender: Any) {
+        if let button = sender as? UIButton {
+            days[1] = !days[1]
+            button.isSelected = days[1]
+            }
+    }
+    @IBAction func wedsButton(_ sender: Any) {
+        if let button = sender as? UIButton {
+            days[2] = !days[2]
+            button.isSelected = days[2]
+            }
+    }
+    @IBAction func thursButton(_ sender: Any) {
+        if let button = sender as? UIButton {
+            days[3] = !days[3]
+            button.isSelected = days[3]
+            }
+    }
+    @IBAction func friButton(_ sender: Any) {
+        if let button = sender as? UIButton {
+            days[4] = !days[4]
+            button.isSelected = days[4]
+            }
+    }
 }

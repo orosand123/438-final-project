@@ -11,6 +11,7 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
     
     
     //functions
+    var days = ["M","T","W","R","F"]
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let mapVC = segue.destination as? MapViewController
         mapVC?.theBuilding = calendarSchedule[currentInt].building
@@ -22,8 +23,22 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
         cell.textLabel!.text = calendarSchedule[indexPath.row].name
+        var description = ""
+        for i in 0...4{
+            if calendarSchedule[indexPath.row].days[i]{
+                description += days[i]
+            } else{
+                description += "-"
+            }
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let time = dateFormatter.string(from: calendarSchedule[indexPath.row].time)
+
+        description += "  " + String(time)
+        cell.detailTextLabel?.text = description
         return cell
         
     }
@@ -32,7 +47,8 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
         performSegue(withIdentifier: "mapSegue", sender: self)
     }
     
-
+    @IBOutlet weak var classTitle: UILabel!
+    
     //instance vars
     var calendarSchedule: [WUClass] = []
     var currentInt = 0
