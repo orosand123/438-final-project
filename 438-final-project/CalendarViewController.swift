@@ -78,6 +78,23 @@ class CalendarViewController: ViewController, UITableViewDataSource, UITableView
         }
         tableView.reloadData()
     }
-    
+    func deleteClass(index: Int){
+        calendarSchedule.remove(at: index)
+        if let encoded = try? JSONEncoder().encode(calendarSchedule){
+            UserDefaults.standard.set(encoded, forKey: "schedule")
+        }
+        tableView.reloadData()
+    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+            -> UISwipeActionsConfiguration? {
+            let delete = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+                self.deleteClass(index: indexPath[1])
+                completionHandler(true)
+            }
+                delete.image = UIImage(systemName: "trash")
+                delete.backgroundColor = UIColor.systemRed
+            let config = UISwipeActionsConfiguration(actions: [delete])
+            return config
+    }
 
 }
