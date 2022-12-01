@@ -43,7 +43,9 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         if selectedBuilding == buildings[indexPath.row]{
             cell.backgroundColor = UIColor.systemGreen
         }
-        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.systemGreen
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
     
