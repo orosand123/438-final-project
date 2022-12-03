@@ -35,18 +35,22 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
         currentLocation.startUpdatingLocation()
         mapView.showsUserLocation = true
         mapView.delegate = self
-        mapView.addAnnotation(theBuilding!)
+        if let building = theBuilding{
+            mapView.addAnnotation(building)
+        }
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.64859, longitude: -90.30775), latitudinalMeters: 1500, longitudinalMeters: 1500)
         mapView.setRegion(region, animated: true)
         
     }
     func getDirections()
-        {
+        {if let building = theBuilding{
             //https://stackoverflow.com/questions/29319643/how-to-draw-a-route-between-two-locations-using-mapkit-in-swift
             let findDirections = MKDirections.Request()
             let currentLocation = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long))
             findDirections.source = MKMapItem(placemark: currentLocation)
-            let buildingCoordinates = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: theBuilding!.latitude, longitude: theBuilding!.longitude))
+            
+            let buildingCoordinates = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: building.latitude, longitude: building
+                .longitude))
             findDirections.destination = MKMapItem(placemark: buildingCoordinates)
             findDirections.transportType = .walking //requests only the walking directions
             let directions = MKDirections(request: findDirections)
@@ -61,6 +65,8 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
                 self.distanceToBuilding.text = "Distance: \(Int(round(walkingRoute.distance*3.28084))) feet"
                 self.mapView.addOverlay(walkingRoute.polyline, level: .aboveRoads)
             }
+        }
+            
         }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let currentLoc: CLLocationCoordinate2D = manager.location?.coordinate else { return }
