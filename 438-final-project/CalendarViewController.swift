@@ -11,6 +11,7 @@ import UserNotifications
 import CoreLocation
 
 class CalendarViewController: ViewController, UNUserNotificationCenterDelegate, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var dateLabel: UILabel!
     
     let userNotificationCenter = UNUserNotificationCenter.current()
     
@@ -81,6 +82,11 @@ class CalendarViewController: ViewController, UNUserNotificationCenterDelegate, 
         self.userNotificationCenter.delegate = self
         self.requestNotificationAuthorization()
         scheduleNotifications()
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        dateLabel.text = dateFormatter.string(from: today)
+        
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
