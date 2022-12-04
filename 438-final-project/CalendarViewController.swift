@@ -120,7 +120,6 @@ class CalendarViewController: ViewController, UNUserNotificationCenterDelegate, 
     
     //outlets and actions
     @IBAction func unwind(_ seg: UIStoryboardSegue){
-        print("cashMoney")
         tableView.reloadData()
         //everything that involves reloading is here
         

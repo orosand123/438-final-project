@@ -67,7 +67,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let building = selectedBuilding{
                 classes = loadClassData()
                 classes.append(WUClass(building: building, name: "\(nameOfClass.text!)", days: days, time: timePicker.date))
-                print(timePicker.date)
                 try! saveClassData(classes)
                 performSegue(withIdentifier: "unwindToCalendar", sender: self)
             } else{
@@ -81,16 +80,17 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     //functions
-    func saveData(_ buildings:[Buildings]) throws{
-        let manager = FileManager.default
-        guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-        let fileUrl = url.appendingPathComponent("building list.plist")
-        try! manager.createFile(atPath: fileUrl.path, contents: nil, attributes: nil)
-        let encoder = PropertyListEncoder()
-        let encodedData = try! encoder.encode(buildings)
-        try! encodedData.write(to: fileUrl)
-        print(fileUrl)
-    }
+//    The following is used to update the building list if needed:
+    
+//    func saveData(_ buildings:[Buildings]) throws{
+//        let manager = FileManager.default
+//        guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
+//        let fileUrl = url.appendingPathComponent("building list.plist")
+//        try! manager.createFile(atPath: fileUrl.path, contents: nil, attributes: nil)
+//        let encoder = PropertyListEncoder()
+//        let encodedData = try! encoder.encode(buildings)
+//        try! encodedData.write(to: fileUrl)
+//    }
     
     func loadData() -> [Buildings]{
         let path = Bundle.main.path(forResource: "building list", ofType: "plist")!
@@ -124,7 +124,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        print("inside classes")
         fullBuildingList = loadData()
         buildings = fullBuildingList
     }
@@ -134,7 +133,6 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.buildings = self.fullBuildingList.filter {
             $0.title?.lowercased().contains(buildingSearchBar.text?.lowercased() ?? "") ?? false
                         }
-        print(buildings.count)
         tableView.reloadData()
     }
     @IBOutlet weak var tableView: UITableView!

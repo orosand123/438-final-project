@@ -58,7 +58,6 @@ class SearchViewController: ViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        print("inside classes")
         fullBuildingList = loadData()
         buildings = fullBuildingList
         navigationItem.searchController = searchController
@@ -75,9 +74,7 @@ class SearchViewController: ViewController, UITableViewDataSource, UITableViewDe
                 self.buildings = self.fullBuildingList
             }
         }
-        
-        print(buildings.count)
-        tableView.reloadData()
+                tableView.reloadData()
     }
     
     @IBOutlet weak var tableView: UITableView!
