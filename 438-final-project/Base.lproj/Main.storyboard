@@ -59,27 +59,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-nf-Bg3">
-                                <rect key="frame" x="8" y="20" width="374" height="649"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-nf-Bg3">
+                                <rect key="frame" x="8" y="47" width="374" height="565"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estimated Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVA-wJ-hGV">
-                                <rect key="frame" x="8" y="677" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVA-wJ-hGV">
+                                <rect key="frame" x="8" y="620" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4Q-L6-9tg">
-                                <rect key="frame" x="8" y="706" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4Q-L6-9tg">
+                                <rect key="frame" x="8" y="649" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h5-Cj-BZq">
-                                <rect key="frame" x="128" y="736" width="134" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h5-Cj-BZq">
+                                <rect key="frame" x="142.66666666666666" y="679" width="105" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View In AR"/>
                                 <connections>
@@ -91,6 +87,23 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GDw-jA-zIg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="centerX" secondItem="wE2-p4-MI4" secondAttribute="centerX" id="2ij-Hb-Brh"/>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="centerX" secondItem="7h5-Cj-BZq" secondAttribute="centerX" id="Aes-kF-TDn"/>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uoH-nf-Bg3" secondAttribute="trailing" id="C9X-gb-T9a"/>
+                            <constraint firstItem="uoH-nf-Bg3" firstAttribute="top" secondItem="GDw-jA-zIg" secondAttribute="top" id="DB5-yY-iQY"/>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GDw-jA-zIg" secondAttribute="leading" id="LVf-cb-GaE"/>
+                            <constraint firstItem="uoH-nf-Bg3" firstAttribute="leading" secondItem="GDw-jA-zIg" secondAttribute="leading" constant="8" id="STG-JH-ZJ2"/>
+                            <constraint firstItem="7h5-Cj-BZq" firstAttribute="top" secondItem="K4Q-L6-9tg" secondAttribute="bottom" constant="9" id="b5A-Vk-g1v"/>
+                            <constraint firstAttribute="bottom" secondItem="K4Q-L6-9tg" secondAttribute="bottom" constant="117" id="bll-Ql-7n6"/>
+                            <constraint firstItem="uoH-nf-Bg3" firstAttribute="leading" secondItem="VVA-wJ-hGV" secondAttribute="leading" id="fBR-tP-zY9"/>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="top" secondItem="VVA-wJ-hGV" secondAttribute="bottom" constant="8" id="gZj-pF-IYh"/>
+                            <constraint firstItem="VVA-wJ-hGV" firstAttribute="centerX" secondItem="GDw-jA-zIg" secondAttribute="centerX" id="kJl-Iu-YSo"/>
+                            <constraint firstItem="uoH-nf-Bg3" firstAttribute="centerX" secondItem="K4Q-L6-9tg" secondAttribute="centerX" id="tGr-su-mHQ"/>
+                            <constraint firstItem="uoH-nf-Bg3" firstAttribute="trailing" secondItem="VVA-wJ-hGV" secondAttribute="trailing" id="v3M-Gd-Cnd"/>
+                            <constraint firstItem="VVA-wJ-hGV" firstAttribute="top" secondItem="uoH-nf-Bg3" secondAttribute="bottom" constant="8" id="xH3-CC-2zQ"/>
+                            <constraint firstItem="K4Q-L6-9tg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VVA-wJ-hGV" secondAttribute="leading" id="xiR-ot-h8r"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="YOP-u1-DI0"/>
                     <navigationItem key="navigationItem" id="JAn-M4-ut0"/>
@@ -163,11 +176,41 @@
                                     <action selector="clearButton:" destination="kRN-M1-Fca" eventType="touchUpInside" id="dzD-Hu-hxg"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="UjK-tw-HRh">
+                                <rect key="frame" x="8" y="711" width="376" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spx-KJ-7d7">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Mon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-VW-vbh">
+                                        <rect key="frame" x="77" y="0.0" width="68" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Tues"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPD-GM-Njz">
+                                        <rect key="frame" x="154" y="0.0" width="68" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Weds"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-OW-KgX">
+                                        <rect key="frame" x="231" y="0.0" width="68" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Thurs"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-wn-hiy">
+                                        <rect key="frame" x="308" y="0.0" width="68" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Fri"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBS-ay-rRs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" selectedImage="calendar" catalog="system" id="9L9-zc-cLN"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="9L9-zc-cLN"/>
                     <connections>
                         <outlet property="tableView" destination="eVE-Le-gwU" id="bcD-ju-hVf"/>
                         <segue destination="nap-k4-rYu" kind="show" identifier="mapSegue" id="S1z-Du-NXb"/>
@@ -175,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hd-TA-356" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="814"/>
+            <point key="canvasLocation" x="867.69230769230762" y="813.98104265402844"/>
         </scene>
         <!--AddClass-->
         <scene sceneID="PMK-AT-tvb">
@@ -336,8 +379,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kRN-M1-Fca" kind="relationship" relationship="viewControllers" id="HMR-hh-jbh"/>
-                        <segue destination="s2k-Uw-Qju" kind="relationship" relationship="viewControllers" id="8gF-Yx-srf"/>
+                        <segue destination="kRN-M1-Fca" kind="relationship" relationship="viewControllers" id="P35-fj-F5f"/>
+                        <segue destination="s2k-Uw-Qju" kind="relationship" relationship="viewControllers" id="IJ5-TD-tmS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekN-BN-dWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -348,7 +391,7 @@
         <scene sceneID="3wJ-8C-JKJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2k-Uw-Qju" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" selectedImage="magnifyingglass" catalog="system" id="eiP-aL-8ly"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="eiP-aL-8ly"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tI3-Uc-Tpy">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
