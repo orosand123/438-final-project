@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0B0518E1291B3E9F0056EC90 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */; };
+		1337312B293E0376007F2627 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373126293E0374007F2627 /* HomeView.swift */; };
+		1337312C293E0376007F2627 /* ARLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373127293E0375007F2627 /* ARLocationView.swift */; };
+		1337312D293E0376007F2627 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373128293E0375007F2627 /* ARViewController.swift */; };
+		1337312E293E0376007F2627 /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373129293E0375007F2627 /* ARContainerView.swift */; };
+		1337312F293E0376007F2627 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337312A293E0376007F2627 /* SettingsView.swift */; };
+		13373131293E039D007F2627 /* AppStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373130293E039C007F2627 /* AppStateController.swift */; };
+		13373133293E03A0007F2627 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373132293E03A0007F2627 /* AppSettings.swift */; };
+		13373136293E03A6007F2627 /* debugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373135293E03A6007F2627 /* debugLog.swift */; };
+		13373137293E03A6007F2627 /* LocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373134293E03A6007F2627 /* LocationUtility.swift */; };
+		13373139293E03AB007F2627 /* ARScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13373138293E03AB007F2627 /* ARScene.swift */; };
+		1337313D293E03BD007F2627 /* ModelDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337313A293E03BD007F2627 /* ModelDataSet.swift */; };
+		1337313E293E03BD007F2627 /* ModelAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337313B293E03BD007F2627 /* ModelAsset.swift */; };
+		1337313F293E03BD007F2627 /* DeviceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337313C293E03BD007F2627 /* DeviceLocation.swift */; };
+		13373141293E04C4007F2627 /* JubelHall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373140293E04C4007F2627 /* JubelHall.usdz */; };
 		133D4C66293DB3970047DC94 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C65293DB3970047DC94 /* Utilities */; };
 		133D4C68293DB4800047DC94 /* DataModel in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C67293DB4800047DC94 /* DataModel */; };
 		133D4C6A293DB4A50047DC94 /* ARScene in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C69293DB4A50047DC94 /* ARScene */; };
@@ -41,6 +55,20 @@
 
 /* Begin PBXFileReference section */
 		0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		13373126293E0374007F2627 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		13373127293E0375007F2627 /* ARLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARLocationView.swift; sourceTree = "<group>"; };
+		13373128293E0375007F2627 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		13373129293E0375007F2627 /* ARContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
+		1337312A293E0376007F2627 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		13373130293E039C007F2627 /* AppStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateController.swift; sourceTree = "<group>"; };
+		13373132293E03A0007F2627 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		13373134293E03A6007F2627 /* LocationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtility.swift; sourceTree = "<group>"; };
+		13373135293E03A6007F2627 /* debugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debugLog.swift; sourceTree = "<group>"; };
+		13373138293E03AB007F2627 /* ARScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScene.swift; sourceTree = "<group>"; };
+		1337313A293E03BD007F2627 /* ModelDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSet.swift; sourceTree = "<group>"; };
+		1337313B293E03BD007F2627 /* ModelAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAsset.swift; sourceTree = "<group>"; };
+		1337313C293E03BD007F2627 /* DeviceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLocation.swift; sourceTree = "<group>"; };
+		13373140293E04C4007F2627 /* JubelHall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = JubelHall.usdz; sourceTree = "<group>"; };
 		133D4C65293DB3970047DC94 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
 		133D4C67293DB4800047DC94 /* DataModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModel; sourceTree = "<group>"; };
 		133D4C69293DB4A50047DC94 /* ARScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ARScene; sourceTree = "<group>"; };
@@ -89,6 +117,7 @@
 		133D4C71293DBFC50047DC94 /* ModelAssets */ = {
 			isa = PBXGroup;
 			children = (
+				13373140293E04C4007F2627 /* JubelHall.usdz */,
 				133D4C86293DC04C0047DC94 /* mcKelvey Hall.usdz */,
 				133D4C80293DC0430047DC94 /* Busch.usdz */,
 				133D4C7E293DC0430047DC94 /* Cupples.usdz */,
@@ -124,6 +153,19 @@
 		9BC2C79529118DB3008A678F /* 438-final-project */ = {
 			isa = PBXGroup;
 			children = (
+				13373129293E0375007F2627 /* ARContainerView.swift */,
+				13373127293E0375007F2627 /* ARLocationView.swift */,
+				13373128293E0375007F2627 /* ARViewController.swift */,
+				13373126293E0374007F2627 /* HomeView.swift */,
+				1337312A293E0376007F2627 /* SettingsView.swift */,
+				13373130293E039C007F2627 /* AppStateController.swift */,
+				13373132293E03A0007F2627 /* AppSettings.swift */,
+				13373138293E03AB007F2627 /* ARScene.swift */,
+				13373135293E03A6007F2627 /* debugLog.swift */,
+				13373134293E03A6007F2627 /* LocationUtility.swift */,
+				1337313C293E03BD007F2627 /* DeviceLocation.swift */,
+				1337313B293E03BD007F2627 /* ModelAsset.swift */,
+				1337313A293E03BD007F2627 /* ModelDataSet.swift */,
 				133D4C71293DBFC50047DC94 /* ModelAssets */,
 				133D4C6D293DB5170047DC94 /* Settings */,
 				133D4C6B293DB4E50047DC94 /* AppStateController */,
@@ -225,6 +267,7 @@
 				133D4C68293DB4800047DC94 /* DataModel in Resources */,
 				133D4C6E293DB5170047DC94 /* Settings in Resources */,
 				133D4C85293DC0430047DC94 /* Busch.usdz in Resources */,
+				13373141293E04C4007F2627 /* JubelHall.usdz in Resources */,
 				133D4C6A293DB4A50047DC94 /* ARScene in Resources */,
 				133D4C87293DC04C0047DC94 /* mcKelvey Hall.usdz in Resources */,
 			);
@@ -237,16 +280,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1337312F293E0376007F2627 /* SettingsView.swift in Sources */,
 				E23EEF80293D5CE4003C8A1C /* CollectionViewCell.swift in Sources */,
+				1337313F293E03BD007F2627 /* DeviceLocation.swift in Sources */,
 				9BDEF8AD291B22CC00F11C9D /* SearchViewController.swift in Sources */,
 				0B0518E1291B3E9F0056EC90 /* ClassViewController.swift in Sources */,
 				9BC2C79B29118DB3008A678F /* ViewController.swift in Sources */,
+				13373139293E03AB007F2627 /* ARScene.swift in Sources */,
 				9BDEF8AF291B22DD00F11C9D /* CalendarViewController.swift in Sources */,
+				1337312B293E0376007F2627 /* HomeView.swift in Sources */,
 				E23EEF7E293D4D74003C8A1C /* HelpViewController.swift in Sources */,
+				1337312E293E0376007F2627 /* ARContainerView.swift in Sources */,
+				13373131293E039D007F2627 /* AppStateController.swift in Sources */,
+				13373136293E03A6007F2627 /* debugLog.swift in Sources */,
 				9BC2C79729118DB3008A678F /* AppDelegate.swift in Sources */,
 				9BDEF8B1291B234900F11C9D /* CalendarObject.swift in Sources */,
+				1337313E293E03BD007F2627 /* ModelAsset.swift in Sources */,
+				1337313D293E03BD007F2627 /* ModelDataSet.swift in Sources */,
+				1337312D293E0376007F2627 /* ARViewController.swift in Sources */,
 				9BC2C79929118DB3008A678F /* SceneDelegate.swift in Sources */,
+				1337312C293E0376007F2627 /* ARLocationView.swift in Sources */,
 				9BDEF8AB291B228800F11C9D /* MapViewController.swift in Sources */,
+				13373133293E03A0007F2627 /* AppSettings.swift in Sources */,
+				13373137293E03A6007F2627 /* LocationUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,9 +449,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MP79UUYMJ;
+				DEVELOPMENT_TEAM = 8F8NM7725N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "438-final-project/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires camera for AR.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app requires location information for map. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requires location information for map. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -424,6 +483,9 @@
 				DEVELOPMENT_TEAM = 8MP79UUYMJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "438-final-project/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires camera for AR.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app requires location information for map. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requires location information for map. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

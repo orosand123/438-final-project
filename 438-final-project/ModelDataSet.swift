@@ -45,7 +45,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Busch",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Busch",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -58,7 +58,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Cupples",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Cupples",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -71,7 +71,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Hillman",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Hillman Hall",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -84,7 +84,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Kemper",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Kemper",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -97,7 +97,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Parkside",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Parkside Cafe",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -110,7 +110,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Ridgley",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Ridgley Hall",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -123,7 +123,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Rudolph",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Rudolph Hall",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -136,7 +136,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Sumers",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Sumers Welcome Center",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -150,7 +150,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Weil",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Weil Hall",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
@@ -164,7 +164,7 @@ class ModelDataSet {
             id: UUID(),
             name: "Whitaker",
             thumbnailFile: "washu",
-            assetFile: "JubelHall",
+            assetFile: "Whitaker Hall",
             scale: SIMD3<Float>(0.25, 0.25, 0.25),
             orientationOnYAxis: 0,
             approachingDistance: 200.0, // [m]
