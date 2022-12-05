@@ -19,6 +19,8 @@
 		9BDEF8AD291B22CC00F11C9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDEF8AC291B22CC00F11C9D /* SearchViewController.swift */; };
 		9BDEF8AF291B22DD00F11C9D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDEF8AE291B22DD00F11C9D /* CalendarViewController.swift */; };
 		9BDEF8B1291B234900F11C9D /* CalendarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDEF8B0291B234900F11C9D /* CalendarObject.swift */; };
+		E23EEF7E293D4D74003C8A1C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EEF7D293D4D74003C8A1C /* HelpViewController.swift */; };
+		E23EEF80293D5CE4003C8A1C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EEF7F293D5CE4003C8A1C /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		9BDEF8AC291B22CC00F11C9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9BDEF8AE291B22DD00F11C9D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		9BDEF8B0291B234900F11C9D /* CalendarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarObject.swift; sourceTree = "<group>"; };
+		E23EEF7D293D4D74003C8A1C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		E23EEF7F293D5CE4003C8A1C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				9BDEF8AE291B22DD00F11C9D /* CalendarViewController.swift */,
 				0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */,
 				9BC2C79C29118DB3008A678F /* Main.storyboard */,
+				E23EEF7D293D4D74003C8A1C /* HelpViewController.swift */,
+				E23EEF7F293D5CE4003C8A1C /* CollectionViewCell.swift */,
 				9BC2C79F29118DB5008A678F /* Assets.xcassets */,
 				9BC2C7A129118DB5008A678F /* LaunchScreen.storyboard */,
 				9BC2C7A429118DB5008A678F /* Info.plist */,
@@ -159,10 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23EEF80293D5CE4003C8A1C /* CollectionViewCell.swift in Sources */,
 				9BDEF8AD291B22CC00F11C9D /* SearchViewController.swift in Sources */,
 				0B0518E1291B3E9F0056EC90 /* ClassViewController.swift in Sources */,
 				9BC2C79B29118DB3008A678F /* ViewController.swift in Sources */,
 				9BDEF8AF291B22DD00F11C9D /* CalendarViewController.swift in Sources */,
+				E23EEF7E293D4D74003C8A1C /* HelpViewController.swift in Sources */,
 				9BC2C79729118DB3008A678F /* AppDelegate.swift in Sources */,
 				9BDEF8B1291B234900F11C9D /* CalendarObject.swift in Sources */,
 				9BC2C79929118DB3008A678F /* SceneDelegate.swift in Sources */,
