@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0B0518E1291B3E9F0056EC90 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */; };
+		133D4C58293DB3150047DC94 /* Weil Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4A293DB3150047DC94 /* Weil Hall.usdz */; };
+		133D4C59293DB3150047DC94 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4B293DB3150047DC94 /* toy_drummer.usdz */; };
+		133D4C5A293DB3150047DC94 /* Ridgley Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4C293DB3150047DC94 /* Ridgley Hall.usdz */; };
+		133D4C5B293DB3150047DC94 /* Jubel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4D293DB3150047DC94 /* Jubel.usdz */; };
+		133D4C5C293DB3150047DC94 /* Rudolph Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4E293DB3150047DC94 /* Rudolph Hall.usdz */; };
+		133D4C5D293DB3150047DC94 /* Whitaker Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C4F293DB3150047DC94 /* Whitaker Hall.usdz */; };
+		133D4C5E293DB3150047DC94 /* Busch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C50293DB3150047DC94 /* Busch.usdz */; };
+		133D4C5F293DB3150047DC94 /* Parkside Cafe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C51293DB3150047DC94 /* Parkside Cafe.usdz */; };
+		133D4C60293DB3150047DC94 /* Cupples.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C52293DB3150047DC94 /* Cupples.usdz */; };
+		133D4C61293DB3150047DC94 /* Hillman Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C53293DB3150047DC94 /* Hillman Hall.usdz */; };
+		133D4C62293DB3150047DC94 /* Sumers Welcome Center.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C54293DB3150047DC94 /* Sumers Welcome Center.usdz */; };
+		133D4C63293DB3150047DC94 /* Kemper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C55293DB3150047DC94 /* Kemper.usdz */; };
+		133D4C64293DB3150047DC94 /* mcKelvey Hall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C56293DB3150047DC94 /* mcKelvey Hall.usdz */; };
+		133D4C66293DB3970047DC94 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C65293DB3970047DC94 /* Utilities */; };
+		133D4C68293DB4800047DC94 /* DataModel in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C67293DB4800047DC94 /* DataModel */; };
+		133D4C6A293DB4A50047DC94 /* ARScene in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C69293DB4A50047DC94 /* ARScene */; };
+		133D4C6C293DB4E60047DC94 /* AppStateController in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C6B293DB4E50047DC94 /* AppStateController */; };
+		133D4C6E293DB5170047DC94 /* Settings in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C6D293DB5170047DC94 /* Settings */; };
 		9B750BF4293878FB00521C73 /* building list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B750BF3293878FB00521C73 /* building list.plist */; };
 		9BC2C79729118DB3008A678F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2C79629118DB3008A678F /* AppDelegate.swift */; };
 		9BC2C79929118DB3008A678F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2C79829118DB3008A678F /* SceneDelegate.swift */; };
@@ -25,6 +43,24 @@
 
 /* Begin PBXFileReference section */
 		0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		133D4C4A293DB3150047DC94 /* Weil Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Weil Hall.usdz"; sourceTree = "<group>"; };
+		133D4C4B293DB3150047DC94 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_drummer.usdz; sourceTree = "<group>"; };
+		133D4C4C293DB3150047DC94 /* Ridgley Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Ridgley Hall.usdz"; sourceTree = "<group>"; };
+		133D4C4D293DB3150047DC94 /* Jubel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Jubel.usdz; sourceTree = "<group>"; };
+		133D4C4E293DB3150047DC94 /* Rudolph Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Rudolph Hall.usdz"; sourceTree = "<group>"; };
+		133D4C4F293DB3150047DC94 /* Whitaker Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Whitaker Hall.usdz"; sourceTree = "<group>"; };
+		133D4C50293DB3150047DC94 /* Busch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Busch.usdz; sourceTree = "<group>"; };
+		133D4C51293DB3150047DC94 /* Parkside Cafe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Parkside Cafe.usdz"; sourceTree = "<group>"; };
+		133D4C52293DB3150047DC94 /* Cupples.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Cupples.usdz; sourceTree = "<group>"; };
+		133D4C53293DB3150047DC94 /* Hillman Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Hillman Hall.usdz"; sourceTree = "<group>"; };
+		133D4C54293DB3150047DC94 /* Sumers Welcome Center.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Sumers Welcome Center.usdz"; sourceTree = "<group>"; };
+		133D4C55293DB3150047DC94 /* Kemper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Kemper.usdz; sourceTree = "<group>"; };
+		133D4C56293DB3150047DC94 /* mcKelvey Hall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mcKelvey Hall.usdz"; sourceTree = "<group>"; };
+		133D4C65293DB3970047DC94 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
+		133D4C67293DB4800047DC94 /* DataModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModel; sourceTree = "<group>"; };
+		133D4C69293DB4A50047DC94 /* ARScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ARScene; sourceTree = "<group>"; };
+		133D4C6B293DB4E50047DC94 /* AppStateController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppStateController; sourceTree = "<group>"; };
+		133D4C6D293DB5170047DC94 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Settings; sourceTree = "<group>"; };
 		134DCC63291B240300DF927F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9B750BF3293878FB00521C73 /* building list.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "building list.plist"; sourceTree = "<group>"; };
 		9BC2C79329118DB3008A678F /* 438-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "438-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +90,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133D4C48293DB2E30047DC94 /* ModelAssets */ = {
+			isa = PBXGroup;
+			children = (
+				133D4C50293DB3150047DC94 /* Busch.usdz */,
+				133D4C52293DB3150047DC94 /* Cupples.usdz */,
+				133D4C53293DB3150047DC94 /* Hillman Hall.usdz */,
+				133D4C4D293DB3150047DC94 /* Jubel.usdz */,
+				133D4C55293DB3150047DC94 /* Kemper.usdz */,
+				133D4C56293DB3150047DC94 /* mcKelvey Hall.usdz */,
+				133D4C51293DB3150047DC94 /* Parkside Cafe.usdz */,
+				133D4C4C293DB3150047DC94 /* Ridgley Hall.usdz */,
+				133D4C4E293DB3150047DC94 /* Rudolph Hall.usdz */,
+				133D4C54293DB3150047DC94 /* Sumers Welcome Center.usdz */,
+				133D4C4B293DB3150047DC94 /* toy_drummer.usdz */,
+				133D4C4A293DB3150047DC94 /* Weil Hall.usdz */,
+				133D4C4F293DB3150047DC94 /* Whitaker Hall.usdz */,
+			);
+			path = ModelAssets;
+			sourceTree = "<group>";
+		};
 		9BC2C78A29118DB3008A678F = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +130,11 @@
 		9BC2C79529118DB3008A678F /* 438-final-project */ = {
 			isa = PBXGroup;
 			children = (
+				133D4C6D293DB5170047DC94 /* Settings */,
+				133D4C6B293DB4E50047DC94 /* AppStateController */,
+				133D4C69293DB4A50047DC94 /* ARScene */,
+				133D4C65293DB3970047DC94 /* Utilities */,
+				133D4C48293DB2E30047DC94 /* ModelAssets */,
 				9BC2C79629118DB3008A678F /* AppDelegate.swift */,
 				9BC2C79829118DB3008A678F /* SceneDelegate.swift */,
 				9BC2C79A29118DB3008A678F /* ViewController.swift */,
@@ -81,6 +142,7 @@
 				9BDEF8AA291B228800F11C9D /* MapViewController.swift */,
 				9BDEF8AC291B22CC00F11C9D /* SearchViewController.swift */,
 				9BDEF8AE291B22DD00F11C9D /* CalendarViewController.swift */,
+				133D4C67293DB4800047DC94 /* DataModel */,
 				0B0518E0291B3E9F0056EC90 /* ClassViewController.swift */,
 				9BC2C79C29118DB3008A678F /* Main.storyboard */,
 				E23EEF7D293D4D74003C8A1C /* HelpViewController.swift */,
@@ -152,9 +214,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC2C7A329118DB5008A678F /* LaunchScreen.storyboard in Resources */,
+				133D4C60293DB3150047DC94 /* Cupples.usdz in Resources */,
+				133D4C5C293DB3150047DC94 /* Rudolph Hall.usdz in Resources */,
+				133D4C59293DB3150047DC94 /* toy_drummer.usdz in Resources */,
+				133D4C5D293DB3150047DC94 /* Whitaker Hall.usdz in Resources */,
+				133D4C58293DB3150047DC94 /* Weil Hall.usdz in Resources */,
+				133D4C64293DB3150047DC94 /* mcKelvey Hall.usdz in Resources */,
+				133D4C6C293DB4E60047DC94 /* AppStateController in Resources */,
+				133D4C5B293DB3150047DC94 /* Jubel.usdz in Resources */,
 				9BC2C7A029118DB5008A678F /* Assets.xcassets in Resources */,
+				133D4C61293DB3150047DC94 /* Hillman Hall.usdz in Resources */,
+				133D4C62293DB3150047DC94 /* Sumers Welcome Center.usdz in Resources */,
 				9BC2C79E29118DB3008A678F /* Main.storyboard in Resources */,
+				133D4C5A293DB3150047DC94 /* Ridgley Hall.usdz in Resources */,
+				133D4C66293DB3970047DC94 /* Utilities in Resources */,
 				9B750BF4293878FB00521C73 /* building list.plist in Resources */,
+				133D4C68293DB4800047DC94 /* DataModel in Resources */,
+				133D4C6E293DB5170047DC94 /* Settings in Resources */,
+				133D4C6A293DB4A50047DC94 /* ARScene in Resources */,
+				133D4C5F293DB3150047DC94 /* Parkside Cafe.usdz in Resources */,
+				133D4C63293DB3150047DC94 /* Kemper.usdz in Resources */,
+				133D4C5E293DB3150047DC94 /* Busch.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
