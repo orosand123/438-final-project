@@ -27,7 +27,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="NdA-Ty-f87">
+                    <navigationItem key="navigationItem" id="NdA-Ty-f87">
                         <barButtonItem key="rightBarButtonItem" style="done" id="Yfh-z6-gX0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IMg-mR-a8i">
                                 <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
