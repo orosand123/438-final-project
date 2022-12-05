@@ -74,17 +74,10 @@ struct DeviceLocationView: View {
         }
         return string
     }
-    private var dateString: String {
-        var string = "unknown"
-        if let location {
-            string = location.timestamp.formatted(date: .numeric, time: .standard)
-        }
-        return string
-    }
+
 
     var body: some View {
         VStack {
-            Text(dateString)
             Text(locationString)
             Text(accuracyString)
         } // VStack

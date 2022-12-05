@@ -24,8 +24,8 @@ struct HomeView: View {
                 }
                 Spacer()
                 Group {
-                    Image(systemName: "location.viewfinder")
-                        .font(.system(size: 40))
+                    Image(systemName: "camera.viewfinder")
+                        .font(.system(size: 80))
                         .padding()
                     Text("WashU AR Map")
                         .font(.title2)
