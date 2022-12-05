@@ -225,8 +225,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Le-gwU">
-                                <rect key="frame" x="8" y="224.66666666666674" width="374" height="432.33333333333326"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3K-dE-Ndb">
+                                <rect key="frame" x="174" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-lF-iW5">
+                                <rect key="frame" x="145.66666666666666" y="91" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Le-gwU">
+                                <rect key="frame" x="8" y="154.99999999999997" width="374" height="432.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="5HU-aC-liD" detailTextLabel="q80-JW-xmU" style="IBUITableViewCellStyleValue1" id="FrL-63-xP7">
@@ -255,29 +267,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3K-dE-Ndb">
-                                <rect key="frame" x="174" y="159" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Todays Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-lF-iW5">
-                                <rect key="frame" x="145.66666666666666" y="130" width="99" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBS-ay-rRs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eVE-Le-gwU" firstAttribute="width" secondItem="4XY-QK-XKu" secondAttribute="width" multiplier="0.958974" id="9Z2-jn-e5w"/>
-                            <constraint firstItem="M3K-dE-Ndb" firstAttribute="top" secondItem="oUh-lF-iW5" secondAttribute="bottom" constant="8" symbolic="YES" id="I8h-eP-Gg2"/>
-                            <constraint firstItem="eVE-Le-gwU" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="NXV-J8-lgX"/>
-                            <constraint firstItem="M3K-dE-Ndb" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="Qf4-QR-g2M"/>
-                            <constraint firstItem="eBS-ay-rRs" firstAttribute="bottom" secondItem="eVE-Le-gwU" secondAttribute="bottom" constant="104" id="fFH-qY-40n"/>
-                            <constraint firstItem="oUh-lF-iW5" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="qay-mM-2VA"/>
-                            <constraint firstItem="eVE-Le-gwU" firstAttribute="top" secondItem="M3K-dE-Ndb" secondAttribute="bottom" constant="44.666666666666686" id="tZn-PG-4XN"/>
+                            <constraint firstItem="oUh-lF-iW5" firstAttribute="top" secondItem="eBS-ay-rRs" secondAttribute="top" id="3DW-EI-DIb"/>
+                            <constraint firstItem="oUh-lF-iW5" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="5BW-k9-fgc"/>
+                            <constraint firstItem="eVE-Le-gwU" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="8tV-X8-cyv"/>
+                            <constraint firstItem="M3K-dE-Ndb" firstAttribute="centerX" secondItem="eBS-ay-rRs" secondAttribute="centerX" id="9mh-ti-Bbu"/>
+                            <constraint firstItem="eVE-Le-gwU" firstAttribute="top" secondItem="M3K-dE-Ndb" secondAttribute="bottom" constant="14" id="HG2-3B-fmG"/>
+                            <constraint firstItem="eVE-Le-gwU" firstAttribute="leading" secondItem="eBS-ay-rRs" secondAttribute="leading" constant="8" id="LVb-QH-7sB"/>
+                            <constraint firstItem="M3K-dE-Ndb" firstAttribute="top" secondItem="oUh-lF-iW5" secondAttribute="bottom" constant="8" symbolic="YES" id="Wlj-7D-Ugz"/>
+                            <constraint firstItem="eBS-ay-rRs" firstAttribute="bottom" secondItem="eVE-Le-gwU" secondAttribute="bottom" constant="173.66666666666674" id="aO8-ul-8HG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dgz-QQ-vYI">
@@ -295,7 +296,7 @@
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="L4X-Pd-2Du">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Yc-04-tmG">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Yc-04-tmG">
                                     <rect key="frame" x="324.33333333333331" y="4.6666666666666679" width="49.666666666666686" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
