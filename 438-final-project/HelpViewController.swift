@@ -16,7 +16,7 @@ class HelpViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //    @IBOutlet weak var pageControllerView: UIPageControl!
     
 
-    var imageHelpArray = ["help1", "help2", "help3"]
+    var imageHelpArray = ["help1", "help2", "help3", "help4", "help5", "help6"]
     var imagePosition = 0
     override func viewDidLoad() {
         super.viewDidLoad()
