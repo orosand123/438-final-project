@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import MapKit
+import SwiftUI
 
 class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDelegate{
 
@@ -42,6 +43,12 @@ class MapViewController: ViewController,MKMapViewDelegate,CLLocationManagerDeleg
         mapView.setRegion(region, animated: true)
         
     }
+    
+    @IBSegueAction func showARView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: HomeView())
+    }
+    
+    
     func getDirections()
         {if let building = theBuilding{
             //https://stackoverflow.com/questions/29319643/how-to-draw-a-route-between-two-locations-using-mapkit-in-swift

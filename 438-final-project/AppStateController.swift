@@ -237,15 +237,14 @@ extension AppStateController: CLLocationManagerDelegate {
         let verticalAccuracy = location.verticalAccuracy
 
         let floor = location.floor?.level
-        let timestamp = location.timestamp
 
         return DeviceLocation(latitude: latitude,
                               longitude: longitude,
                               altitude: altitude,
                               floor: floor,
                               horizontalAccuracy: horizontalAccuracy,
-                              verticalAccuracy: verticalAccuracy,
-                              timestamp: timestamp)
+                              verticalAccuracy: verticalAccuracy
+                              )
     }
 
     //    func locationManager(_ manager: CLLocationManager, didUpdateTo: CLLocation, from: CLLocation) {

@@ -48,10 +48,8 @@ struct DeviceLocation {
     // altitude values.
     let verticalAccuracy: Double // [meters]
 
-    // The time at which this location was determined.
-    let timestamp: Date
+ 
 
     static let zero = Self(latitude: 0, longitude: 0, altitude: 0, floor: nil,
-                           horizontalAccuracy: 10, verticalAccuracy: 10,
-                           timestamp: Date())
+                           horizontalAccuracy: 10, verticalAccuracy: 10)
 }

@@ -5,8 +5,12 @@
 //  Used public AR Geo Mapping Repo with permission from Yasuhito Nagatomo on 2022/06/18.
 //
 
+//Code below cited from https://www.atarayosd.com/developer.html Yasuhito Nagatomo
+
 import Foundation
 import CoreLocation
+
+
 
 class LocationUtility {
     private init() {}
