@@ -22,6 +22,15 @@
 		1337313E293E03BD007F2627 /* ModelAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337313B293E03BD007F2627 /* ModelAsset.swift */; };
 		1337313F293E03BD007F2627 /* DeviceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337313C293E03BD007F2627 /* DeviceLocation.swift */; };
 		13373141293E04C4007F2627 /* JubelHall.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373140293E04C4007F2627 /* JubelHall.usdz */; };
+		13373143293E17C5007F2627 /* Brookings.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373142293E17C4007F2627 /* Brookings.usdz */; };
+		1337314C293E2E34007F2627 /* Simon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373144293E2E32007F2627 /* Simon.usdz */; };
+		1337314D293E2E34007F2627 /* Duc.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373145293E2E32007F2627 /* Duc.usdz */; };
+		1337314E293E2E34007F2627 /* Graham.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373146293E2E33007F2627 /* Graham.usdz */; };
+		1337314F293E2E34007F2627 /* Olin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373147293E2E33007F2627 /* Olin.usdz */; };
+		13373150293E2E34007F2627 /* Eads.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373148293E2E33007F2627 /* Eads.usdz */; };
+		13373151293E2E34007F2627 /* Siegel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13373149293E2E33007F2627 /* Siegel.usdz */; };
+		13373152293E2E34007F2627 /* Knight.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1337314A293E2E33007F2627 /* Knight.usdz */; };
+		13373153293E2E34007F2627 /* Wilson.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1337314B293E2E33007F2627 /* Wilson.usdz */; };
 		133D4C66293DB3970047DC94 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C65293DB3970047DC94 /* Utilities */; };
 		133D4C68293DB4800047DC94 /* DataModel in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C67293DB4800047DC94 /* DataModel */; };
 		133D4C6A293DB4A50047DC94 /* ARScene in Resources */ = {isa = PBXBuildFile; fileRef = 133D4C69293DB4A50047DC94 /* ARScene */; };
@@ -69,6 +78,15 @@
 		1337313B293E03BD007F2627 /* ModelAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAsset.swift; sourceTree = "<group>"; };
 		1337313C293E03BD007F2627 /* DeviceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLocation.swift; sourceTree = "<group>"; };
 		13373140293E04C4007F2627 /* JubelHall.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = JubelHall.usdz; sourceTree = "<group>"; };
+		13373142293E17C4007F2627 /* Brookings.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Brookings.usdz; sourceTree = "<group>"; };
+		13373144293E2E32007F2627 /* Simon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Simon.usdz; sourceTree = "<group>"; };
+		13373145293E2E32007F2627 /* Duc.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Duc.usdz; sourceTree = "<group>"; };
+		13373146293E2E33007F2627 /* Graham.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Graham.usdz; sourceTree = "<group>"; };
+		13373147293E2E33007F2627 /* Olin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Olin.usdz; sourceTree = "<group>"; };
+		13373148293E2E33007F2627 /* Eads.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Eads.usdz; sourceTree = "<group>"; };
+		13373149293E2E33007F2627 /* Siegel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Siegel.usdz; sourceTree = "<group>"; };
+		1337314A293E2E33007F2627 /* Knight.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Knight.usdz; sourceTree = "<group>"; };
+		1337314B293E2E33007F2627 /* Wilson.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wilson.usdz; sourceTree = "<group>"; };
 		133D4C65293DB3970047DC94 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
 		133D4C67293DB4800047DC94 /* DataModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModel; sourceTree = "<group>"; };
 		133D4C69293DB4A50047DC94 /* ARScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ARScene; sourceTree = "<group>"; };
@@ -117,6 +135,15 @@
 		133D4C71293DBFC50047DC94 /* ModelAssets */ = {
 			isa = PBXGroup;
 			children = (
+				13373145293E2E32007F2627 /* Duc.usdz */,
+				13373148293E2E33007F2627 /* Eads.usdz */,
+				13373146293E2E33007F2627 /* Graham.usdz */,
+				1337314A293E2E33007F2627 /* Knight.usdz */,
+				13373147293E2E33007F2627 /* Olin.usdz */,
+				13373149293E2E33007F2627 /* Siegel.usdz */,
+				13373144293E2E32007F2627 /* Simon.usdz */,
+				1337314B293E2E33007F2627 /* Wilson.usdz */,
+				13373142293E17C4007F2627 /* Brookings.usdz */,
 				13373140293E04C4007F2627 /* JubelHall.usdz */,
 				133D4C86293DC04C0047DC94 /* mcKelvey Hall.usdz */,
 				133D4C80293DC0430047DC94 /* Busch.usdz */,
@@ -249,12 +276,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1337314D293E2E34007F2627 /* Duc.usdz in Resources */,
 				9BC2C7A329118DB5008A678F /* LaunchScreen.storyboard in Resources */,
+				1337314C293E2E34007F2627 /* Simon.usdz in Resources */,
 				133D4C6C293DB4E60047DC94 /* AppStateController in Resources */,
 				133D4C83293DC0430047DC94 /* Cupples.usdz in Resources */,
 				133D4C78293DC0240047DC94 /* Weil Hall.usdz in Resources */,
 				9BC2C7A029118DB5008A678F /* Assets.xcassets in Resources */,
 				9BC2C79E29118DB3008A678F /* Main.storyboard in Resources */,
+				13373143293E17C5007F2627 /* Brookings.usdz in Resources */,
+				1337314F293E2E34007F2627 /* Olin.usdz in Resources */,
 				133D4C77293DC0240047DC94 /* Sumers Welcome Center.usdz in Resources */,
 				133D4C82293DC0430047DC94 /* Ridgley Hall.usdz in Resources */,
 				133D4C66293DB3970047DC94 /* Utilities in Resources */,
@@ -265,8 +296,13 @@
 				133D4C79293DC0240047DC94 /* Parkside Cafe.usdz in Resources */,
 				133D4C84293DC0430047DC94 /* Whitaker Hall.usdz in Resources */,
 				133D4C68293DB4800047DC94 /* DataModel in Resources */,
+				13373152293E2E34007F2627 /* Knight.usdz in Resources */,
 				133D4C6E293DB5170047DC94 /* Settings in Resources */,
+				13373150293E2E34007F2627 /* Eads.usdz in Resources */,
+				13373153293E2E34007F2627 /* Wilson.usdz in Resources */,
+				1337314E293E2E34007F2627 /* Graham.usdz in Resources */,
 				133D4C85293DC0430047DC94 /* Busch.usdz in Resources */,
+				13373151293E2E34007F2627 /* Siegel.usdz in Resources */,
 				13373141293E04C4007F2627 /* JubelHall.usdz in Resources */,
 				133D4C6A293DB4A50047DC94 /* ARScene in Resources */,
 				133D4C87293DC04C0047DC94 /* mcKelvey Hall.usdz in Resources */,

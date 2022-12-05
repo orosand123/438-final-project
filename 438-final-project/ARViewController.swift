@@ -73,15 +73,7 @@ final class ARViewController: UIViewController {
                     debugLog("AR: people occlusion was enabled.")
                 }
             }
-            // [Note]
-            // When you enable scene reconstruction, ARKit provides a polygonal mesh
-            // that estimates the shape of the physical environment.
-            // If you enable plane detection, ARKit applies that information to the mesh.
-            // Where the LiDAR scanner may produce a slightly uneven mesh on a real-world surface,
-            // ARKit smooths out the mesh where it detects a plane on that surface.
-            // If you enable people occlusion, ARKit adjusts the mesh according to any people
-            // it detects in the camera feed. ARKit removes any part of the scene mesh that
-            // overlaps with people
+        
             if AppSettings.share.enableObjectOcclusion { // Object occlusion
                 if ARViewController.isObjectOcclusionSupported {
                     // Enable the object occlusion

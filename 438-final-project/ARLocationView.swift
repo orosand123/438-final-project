@@ -22,8 +22,9 @@ struct ARLocationView: View {
                     DeviceLocationView(location: appStateController.deviceLocation)
                     Spacer()
                     Button(action: dismiss.callAsFunction) {
-                        Image(systemName: "xmark.circle")
+                        Image(systemName: "xmark.square")
                             .font(.title)
+                            .scaleEffect(1.5)
                             .padding(40)
                     }
                 } // HStack
