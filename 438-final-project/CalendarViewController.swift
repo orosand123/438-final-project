@@ -184,7 +184,7 @@ class CalendarViewController: ViewController, UNUserNotificationCenterDelegate, 
                 content.title = wuClass.name + "Starting in 15 minutes"
                 content.body = "Tap here for directions to class!"
                 content.categoryIdentifier = "todoList"
-                content.userInfo = ["title":wuClass.building.title,"locationName": wuClass.building.locationName,"lat":wuClass.building.coordinate.latitude,"long":wuClass.building.coordinate.longitude]
+                content.userInfo = ["title":wuClass.building.title!,"locationName": wuClass.building.locationName,"lat":wuClass.building.coordinate.latitude,"long":wuClass.building.coordinate.longitude]
                 let request = UNNotificationRequest(identifier: "classNotificationFor"+wuClass.name+String(i), content: content, trigger: trigger)
                 
                 userNotificationCenter.add(request) {(error) in

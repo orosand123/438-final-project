@@ -8,7 +8,7 @@
 import Foundation
 
 func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-    Swift.print("ASG : \(items.first ?? "")")
+//    Swift.print("ASG : \(items.first ?? "")")
 }
 
 #if !DEBUG
@@ -29,8 +29,8 @@ func debugLog(_ items: Any..., separator: String = " ", terminator: String = "\n
     let url = URL(fileURLWithPath: file)
     let filename = url.lastPathComponent
     let thread = Thread.isMainThread ? "(m)" : "(-)"
-    Swift.print("[@Log] : \(filename): L\(line): T\(thread): \(items.first ?? "")",
-                separator: separator, terminator: terminator)
+//    Swift.print("[@Log] : \(filename): L\(line): T\(thread): \(items.first ?? "")",
+//                separator: separator, terminator: terminator)
 }
 
 #endif
