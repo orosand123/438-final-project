@@ -28,8 +28,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="NdA-Ty-f87">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Yfh-z6-gX0">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IMg-mR-a8i">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="Yfh-z6-gX0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IMg-mR-a8i">
                                 <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -283,24 +283,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="dgz-QQ-vYI">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="mbe-Q6-TM3">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="mbe-Q6-TM3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yPi-l5-KvY">
                                 <rect key="frame" x="16" y="5" width="64" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="trash" catalog="system"/>
                                 <connections>
                                     <action selector="clearButton:" destination="kRN-M1-Fca" eventType="touchUpInside" id="dzD-Hu-hxg"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="L4X-Pd-2Du">
+                            <barButtonItem style="done" id="L4X-Pd-2Du">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Yc-04-tmG">
                                     <rect key="frame" x="324.33333333333331" y="4.6666666666666679" width="49.666666666666686" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="info.circle" catalog="system"/>
                                     <connections>
                                         <segue destination="QhH-P3-CwA" kind="popoverPresentation" popoverAnchorView="6Yc-04-tmG" id="4vB-eJ-sSc">
                                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -308,12 +308,12 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="plY-9H-tYV">
+                            <barButtonItem style="done" id="plY-9H-tYV">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WLj-12-vIb">
                                     <rect key="frame" x="269.33333333333331" y="5" width="47" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="plus" catalog="system"/>
                                     <connections>
                                         <segue destination="1hc-nB-Ae6" kind="presentation" id="AOe-Qg-sYC"/>
                                     </connections>
@@ -538,8 +538,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4vB-eJ-sSc"/>
-        <segue reference="S1z-Du-NXb"/>
+        <segue reference="TwS-5V-vXC"/>
+        <segue reference="gu2-k4-yYe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
