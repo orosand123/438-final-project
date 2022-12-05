@@ -24,7 +24,7 @@ struct LocationCapabilities {
 class AppStateController: NSObject, ObservableObject {
     // Location Manager
     let locationManager = CLLocationManager()
-    let locationCapabilities: LocationCapabilities
+    var locationCapabilities: LocationCapabilities?
     enum UpdatingLocationState: Int { case updating = 0, stop }
     var updatingLocationState = UpdatingLocationState.stop
 
@@ -40,10 +40,16 @@ class AppStateController: NSObject, ObservableObject {
     var lastLocation: CLLocation?
 
     // Model Assets
-    let modelAssets = ModelDataSet.dataSet
-
+    let modelAssets = ModelDataSet.dataSet;
+    
+    
     override init() {
-        locationCapabilities = Self.checkLocationCapabilities()
+        
+        defer { Task {
+            @MainActor in locationCapabilities = Self.checkLocationCapabilities()
+           
+            }
+        }
         super.init()
         locationManager.delegate = self
     }

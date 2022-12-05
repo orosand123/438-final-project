@@ -19,7 +19,7 @@ struct ARLocationView: View {
             VStack {
                 HStack {
                     Spacer()
-                    DeviceLocationView(location: appStateController.deviceLocation)
+                    DeviceLocationView(location_: appStateController.deviceLocation)
                     Spacer()
                     Button(action: dismiss.callAsFunction) {
                         Image(systemName: "xmark.square")
@@ -47,10 +47,10 @@ struct ARLocationView_Previews: PreviewProvider {
 }
 
 struct DeviceLocationView: View {
-    let location: DeviceLocation?
+    let location_: DeviceLocation?
     private var locationString: String {
         var string = "unknown"
-        if let location {
+        if let location = location_{
             if AppSettings.share.showingCoordinateOfDevice {
                 string = "("
                 + String(format: "%3.6f", location.latitude) + ", "
@@ -66,7 +66,7 @@ struct DeviceLocationView: View {
     }
     private var accuracyString: String {
         var string = "unknown"
-        if let location {
+        if let location = location_{
             string = "Accuracy hor: "
                 + String(format: "%3.2f", location.horizontalAccuracy) + "[m], ver: "
                 + String(format: "%3.2f", location.verticalAccuracy)

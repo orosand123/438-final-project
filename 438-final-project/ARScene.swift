@@ -61,7 +61,8 @@ extension ARScene {
     // in the virtual space, according to the changes of geographical location
     func updateLocation(device: DeviceLocation?, assets: [ModelAsset]) {
         debugLog("updateLocation(device:assets:) was called.")
-        guard let device, !assets.isEmpty else { return }
+        guard let device = device else { return }
+        
 
         let currentDeviceLocation = device // in real space
         let currentDeviceTranslation = arView.cameraTransform.translation // in virtual space
